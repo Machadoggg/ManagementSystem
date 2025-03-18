@@ -4,12 +4,15 @@ using ManagementSystem.Infrastructure.Data;
 using ManagementSystem.Infrastructure.Interfaces;
 using ManagementSystem.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
 builder.Services.AddScoped<ICuentaPorCobrarRepository, CuentaPorCobrarRepository>();
 builder.Services.AddScoped<ICuentaPorCobrarService, CuentaPorCobrarService>();
