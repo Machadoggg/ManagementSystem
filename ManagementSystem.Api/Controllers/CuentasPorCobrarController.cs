@@ -70,5 +70,14 @@ namespace ManagementSystem.Api.Controllers
             var excelBytes = await _service.ExportToExcelAsync(cuentas);
             return File(excelBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Reporte.xlsx");
         }
+
+        [HttpGet("exportTotal")]
+        public async Task<IActionResult> ExportTotalToExcel()
+        {
+            var cuentas = await _service.GetAllAsync();
+            var excelBytes = await _service.ExportToExcelAsync(cuentas);
+            return File(excelBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ReporteTotal.xlsx");
+        }
+
     }
 }
