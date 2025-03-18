@@ -20,6 +20,7 @@ namespace ManagementSystem.Api.Controllers
         {
             var cuentas = await _service.GetAllAsync();
             return Ok(cuentas);
+            ///////////////Método que lee archivo de excel
             //var cuentas = await _service.GetAllAsync();
             //var excelBytes = await _service.ExportToExcelAsync(cuentas);
             //return File(excelBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Reporte.xlsx");
