@@ -21,5 +21,14 @@
         public decimal Davivienda { get; set; }
         public decimal Bancolombia { get; set; }
         public decimal Efectivo { get; set; }
+
+        //public decimal IVA { get; set; }
+        //public decimal Pagado { get; set; }
+        //public DateTime FechaPago { get; set; }
+        //public int Dias { get; set; }
+        //public decimal Efectivo { get; set; }
+        //public decimal Bancolombia { get; set; }
+        //public decimal Auxiliar { get; set; }
+        //public decimal Davivienda { get; set; }
     }
 }
