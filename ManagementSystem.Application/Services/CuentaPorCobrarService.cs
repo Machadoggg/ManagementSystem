@@ -3,6 +3,7 @@ using ManagementSystem.Domain.Entities;
 using ManagementSystem.Infrastructure.Interfaces;
 
 
+
 namespace ManagementSystem.Application.Services
 {
     public class CuentaPorCobrarService : ICuentaPorCobrarService
@@ -46,7 +47,7 @@ namespace ManagementSystem.Application.Services
 
         public async Task<byte[]> ExportToExcelAsync(List<CuentaPorCobrar> cuentas)
         {
-            using (var package = new ExcelPackage())
+            using (var package = new OfficeOpenXml.ExcelPackage())
             {
                 var worksheet = package.Workbook.Worksheets.Add("Reporte");
                 worksheet.Cells.LoadFromCollection(cuentas, true);

@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ManagementSystem.Domain\ManagementSystem.Domain.csproj" />
+    <ProjectReference Include="..\ManagementSystem.Infrastructure\ManagementSystem.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
